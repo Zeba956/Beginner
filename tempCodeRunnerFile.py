@@ -1,16 +1,15 @@
-
-#Palindrome number
+#Armstrong number
 
 num = int(input("Enter a number: "))
 temp = num
-rev = 0
+sum = 0
 
 while num > 0:
     digit = num % 10
-    rev = rev * 10 + digit
+    sum = sum + digit**3
     num = num // 10
 
-if temp == rev:
-    print("Palindrome Number")
+if temp == sum:
+    print("Armstrong Number")
 else:
-    print("Not a Palindrome Number")
+    print("Not an Armstrong Number")
